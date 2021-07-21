@@ -118,7 +118,7 @@ class FPSWidget {
 let fps = new FPSWidget(100, 100, 30);
 
 browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-	if (request.message === "clicked_browser_action") {
+	window.onload(()=>{
 		fps.toggle();
-	}
+	};
 });
